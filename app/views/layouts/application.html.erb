@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Musteatpie</title>
+  <title>Must Eat Pie | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="left-col">
+    <a id="logo"></a>
+    <a id="home-link">Home</a>
+    <a id="about-link">About</a>
+    <a id="current-menu-link">Current Menu</a>
+    <a id="order-link">Order</a>
+  </div>
+  <div id="right-col">
+    <%= yield %>
+  </div>
 </body>
 </html>
