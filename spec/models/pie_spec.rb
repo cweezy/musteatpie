@@ -2,15 +2,20 @@ require 'spec_helper'
 
 describe Pie do
   before do
-    attrs =  {
+    @menu = Menu.create(
+      is_sweet: true,
+      name: "Summer 2020 Sweet Pies",
+      is_current: true,
+      image_url: "http://somewhere.com/somepic.jpg"
+    )
+    @pie = Pie.new(
       name: "Apple",
       description: "A delicious pie with apples and cinnomon and heroin.",
-      menu_id: 1,
       price: 5.32,
       is_vegan: false,
-      is_vegetarian: true
-    }
-    @pie = Pie.new(attrs)
+      is_vegetarian: true,
+      menu: @menu
+    )
   end
 
   subject { @pie }

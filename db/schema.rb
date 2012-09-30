@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120930173408) do
+ActiveRecord::Schema.define(:version => 20120930184929) do
+
+  create_table "menus", :force => true do |t|
+    t.boolean  "is_sweet"
+    t.string   "name"
+    t.boolean  "is_current"
+    t.string   "image_url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "pies", :force => true do |t|
     t.string   "name"
