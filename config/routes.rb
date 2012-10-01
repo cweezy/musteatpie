@@ -4,6 +4,8 @@ Musteatpie::Application.routes.draw do
 
   get "static_pages/about"
 
+  resources :menus
+
 
   match 'about', to: 'static_pages#about'
 
