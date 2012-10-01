@@ -1,4 +1,18 @@
 Musteatpie::Application.routes.draw do
+  get "pies/new"
+
+  get "pies/create"
+
+  get "pies/update"
+
+  get "pies/edit"
+
+  get "pies/destroy"
+
+  get "pies/index"
+
+  get "pies/show"
+
   resources :pie_orders
 
   root to: 'static_pages#home'

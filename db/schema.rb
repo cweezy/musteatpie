@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120930213521) do
+ActiveRecord::Schema.define(:version => 20121001023128) do
 
   create_table "menus", :force => true do |t|
     t.boolean  "is_sweet"
@@ -22,11 +22,29 @@ ActiveRecord::Schema.define(:version => 20120930213521) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "orders", :force => true do |t|
+    t.string   "customer_name"
+    t.string   "email"
+    t.text     "comments"
+    t.string   "phone"
+    t.integer  "pickup_loc_id"
+    t.datetime "pickup_datetime"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "pickup_locs", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "pie_orders", :force => true do |t|
+    t.integer  "pie_id"
+    t.integer  "quantity"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "pies", :force => true do |t|

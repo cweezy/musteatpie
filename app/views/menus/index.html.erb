@@ -1,1 +1,29 @@
-a bay bay
+<h1>Here are the menus</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Is Current</th>
+    <th>Is Sweet</th>
+    <th>Pic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @menus.each do |menu| %>
+  <tr>
+    <td><%= menu.name %></td>
+    <td><%= menu.is_current %></td>
+    <td><%= menu.is_sweet %></td>
+    <td><%= menu.image_url %></td>
+    <td><%= link_to 'Show', menu %></td>
+    <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+    <td><%= link_to 'Destroy', menu, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menu', new_menu_path %>
