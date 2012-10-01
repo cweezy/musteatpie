@@ -1,4 +1,6 @@
 Musteatpie::Application.routes.draw do
+  resources :pie_orders
+
   root to: 'static_pages#home'
   get "static_pages/home"
 
