@@ -1,2 +1,35 @@
-<h1>Pies#show</h1>
-<p>Find me in app/views/pies/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pie.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @pie.description %>
+</p>
+
+<p>
+  <b>Is vegetarian:</b>
+  <%= @pie.is_vegetarian %>
+</p>
+
+<p>
+  <b>Is vegan:</b>
+  <%= @pie.is_vegan %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @pie.price %>
+</p>
+
+<p>
+  <b>Menu:</b>
+  <%= @menu.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_py_path(@pie) %> |
+<%= link_to 'Back', pies_path %>

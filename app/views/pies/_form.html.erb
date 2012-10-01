@@ -1,0 +1,42 @@
+<%= form_for(@pie) do |f| %>
+  <% if @pie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pie.errors.count, "error") %> prohibited this pie from being saved:</h2>
+
+      <ul>
+      <% @pie.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :is_vegan %><br />
+    <%= f.select :is_vegan, [true, false] %>
+  </div>
+  <div class="field">
+    <%= f.label :is_vegetarian %><br />
+    <%= f.select :is_vegetarian, [true, false] %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price, :value => (number_with_precision(@pie.price, :precision => 2) || 0) %>
+  </div>
+  <div class="field">
+    <%= f.label :menu %><br />
+    <%= f.select :menu_id, @menu_options %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

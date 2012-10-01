@@ -1,2 +1,33 @@
-<h1>Pies#index</h1>
-<p>Find me in app/views/pies/index.html.erb</p>
+<h1>Here are the pies</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Is Vegan</th>
+    <th>Is Vegetarian</th>
+    <th>Menu Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pies.each do |pie| %>
+  <tr>
+    <td><%= pie.description %></td>
+    <td><%= pie.is_vegan %></td>
+    <td><%= pie.is_vegetarian %></td>
+    <td><%= pie.menu_id %></td>
+    <td><%= pie.name %></td>
+    <td><%= pie.price %></td>
+    <td><%= link_to 'Show', pie %></td>
+    <td><%= link_to 'Edit', edit_py_path(pie) %></td>
+    <td><%= link_to 'Destroy', pie, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pie', new_py_path %>

@@ -1,17 +1,4 @@
 Musteatpie::Application.routes.draw do
-  get "pies/new"
-
-  get "pies/create"
-
-  get "pies/update"
-
-  get "pies/edit"
-
-  get "pies/destroy"
-
-  get "pies/index"
-
-  get "pies/show"
 
   resources :pie_orders
 
@@ -21,6 +8,7 @@ Musteatpie::Application.routes.draw do
   get "static_pages/about"
 
   resources :menus
+  resources :pies
 
 
   match 'about', to: 'static_pages#about'
