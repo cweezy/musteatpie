@@ -2,20 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: Georgia, Times, "Times New Roman", serif;
+  background: snow;
+  margin: 0px;
+  height: 100%;
 }
 
 #left-col {
+  height: 100%;
   display: inline-block; 
-  margin: 5px;
-  width: 200px;
+  margin-right: 20px;
+  width: 180px;
+  background-color: firebrick;
+  padding-left: 20px;
   a {
     cursor: pointer;
-    color: fireBrick;
+    color: white;
     font-size: 24px;
     display: block;
     margin-bottom: 20px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -24,4 +39,47 @@ body {
   display: inline-block;
   vertical-align: top;
   text-align: center;
+}
+
+.menus-column {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 350px;
+  vertical-align: top;
+}
+
+.menu-column-title {
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
+.menu {
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.menu-name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.pie {
+  text-align: left;
+  padding: 5px;
+}
+
+.pie-name {
+  font-weight: bold;
+}
+
+.pie-vegan, .pie-vegetarian {
+  color: limeGreen;
+  font-size: 12px;
+  font-weight: bold;
 }

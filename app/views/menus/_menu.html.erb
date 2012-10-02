@@ -1,1 +1,6 @@
-menu partial
+<div class="menu">
+  <div class="menu-name"><%= menu.name %></div>
+  <% menu.pies.each do |pie| %>
+    <%= render pie %>
+  <% end %>
+</div>

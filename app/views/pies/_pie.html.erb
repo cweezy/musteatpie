@@ -1,0 +1,9 @@
+<div class="pie">
+  <span class="pie-name"><%= pie.name %> - </span>
+  <%= pie.description %>
+  <% if pie.is_vegan %>
+    <span class="pie-vegan"> Vegan </span>
+  <% elsif pie.is_vegetarian %>
+    <span class="pie-vegetarian"> Vegetarian </span>
+  <% end %>
+</div>
