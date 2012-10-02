@@ -63,5 +63,6 @@ module Musteatpie
     config.assets.version = '1.0'
 
     config.assets.precompile += ['admin.css']
+    config.assets.initialize_on_precompile = false
   end
 end
