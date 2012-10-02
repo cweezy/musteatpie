@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chris is the best</title>
+  <%= stylesheet_link_tag    "admin", :media => "all" %>
+  <%#= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="admin-nav">
+    <a href="/menus">Menus</a>
+    <a href="/pies">Pies</a>
+  <%= yield %>
+</body>
+</html>

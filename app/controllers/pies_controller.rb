@@ -1,4 +1,4 @@
-class PiesController < ApplicationController
+class PiesController < AdminController
   before_filter :sanitize_params, :only => [:update, :create]
 
   def sanitize_params

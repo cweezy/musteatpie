@@ -1,4 +1,4 @@
-class MenusController < ApplicationController
+class MenusController < AdminController
   before_filter :sanitize_params, :only => [:update, :create]
 
   def sanitize_params
