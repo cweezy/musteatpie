@@ -11,3 +11,11 @@
  *= require_self
  *= require ./scaffolds
 */
+
+#admin-nav {
+  background-color: #bbddff;
+}
+
+#admin-nav a {
+  font-size: 24px;
+}
