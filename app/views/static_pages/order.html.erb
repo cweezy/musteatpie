@@ -1,2 +1,27 @@
-<% provide :title, 'Order' %>
-Order page coming soon
+<% provide :title, 'Order a pie' %>
+<%= form_for (@order) do |f| %>
+
+  <div class="field">
+    <%= f.label :customer_name %><br />
+    <%= f.text_field :customer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <%= f.fields_for :pie_orders do |builder| %>
+    <%= render "pie_orders", :f => builder %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Pie", f, :pie_orders %></p>
+  <div class="field">
+    <%= f.label :comments_or_whatever %>
+    <%= f.text_area :comments, rows: 3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -9,6 +9,7 @@ Musteatpie::Application.routes.draw do
 
   resources :menus
   resources :pies
+  resources :orders
 
 
   match 'about', to: 'static_pages#about'

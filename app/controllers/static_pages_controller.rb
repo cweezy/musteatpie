@@ -11,5 +11,21 @@ class StaticPagesController < ApplicationController
   end
 
   def order
+    current_pies = Pie.select do |pie|
+      pie.menu.is_current
+    end
+
+    @pie_options = current_pies.map do |p|
+      [p.name, p.id]
+    end
+
+    @order = Order.new
+    1.times do
+      @order.pie_orders.push PieOrder.new
+    end
+    
+    respond_to do |format|
+      format.html
+    end
   end
 end

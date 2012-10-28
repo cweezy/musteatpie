@@ -3,6 +3,7 @@ class CreatePieOrders < ActiveRecord::Migration
     create_table :pie_orders do |t|
       t.integer :pie_id
       t.integer :quantity
+      t.integer :order_id
 
       t.timestamps
     end

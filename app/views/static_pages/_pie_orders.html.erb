@@ -1,0 +1,6 @@
+<p class="pie_order_field">
+  <%= f.label :pie %><%= f.select :pie_id, @pie_options %>
+  <%= f.label :quantity %><%= f.select :quantity, [1,2,3,4,5] %>
+  <%= link_to_remove_fields "remove", f %>
+
+</p>
