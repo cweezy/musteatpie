@@ -4,29 +4,44 @@
 
 body {
   font-family: Georgia, Times, "Times New Roman", serif;
-  background: #555544;
   margin: 0px;
   height: 100%;
   text-align: center;
 }
 
-#top-menu {
+.valign-outer {
+  display: table;
   width: 100%;
-  background: saddleBrown;
-  border-bottom: 4px solid white;
-  padding-bottom: 5px;
+}
+
+.main-box {
+  display: table-cell;
+  height: 500px;
+  vertical-align: middle;
+}
+
+#top-menu {
+  color: saddleBrown;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid saddleBrown;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 2px #333;
+  padding-bottom: 10px;
+  
   a {
     &#logo {
       font-family: 'Allerta Stencil', sans-serif;
       font-size: 80px;
-      text-shadow: 2px 3px #111111;
+      text-shadow: 2px 3px #888;
       letter-spacing: 4px;
       &:hover {
         text-decoration: none;
       }
     }
     cursor: pointer;
-    color: white;
+    color: saddleBrown;
     font-size: 24px;
     display: inline-block;
     text-decoration: none;
@@ -40,15 +55,11 @@ body {
 }
 
 #content {
-  margin-top: 20px;
-  width: 600px;
-  min-height: 400px;
+  color: saddleBrown;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
-  background: white;
-  border: 4px solid saddleBrown;
-  border-radius: 20px;
-  color: saddleBrown;
+  margin-top: 25px;
 }
 
 .menus-column {
