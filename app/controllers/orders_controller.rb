@@ -1,4 +1,5 @@
 class OrdersController < AdminController
+  before_filter :authenticate, :except => [:create]
 
   # POST /orders.json
   def create
@@ -9,7 +10,9 @@ class OrdersController < AdminController
 
     respond_to do |format|
       if @order.save
+        flash[:last_order] = @order
         format.json { render json: @order, status: :created, location: @order }
+        format.html { redirect_to thankyou_path }
       else
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

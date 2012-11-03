@@ -28,4 +28,7 @@ class StaticPagesController < ApplicationController
       format.html
     end
   end
+  
+  def thank_you
+  end
 end

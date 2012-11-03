@@ -15,6 +15,7 @@ Musteatpie::Application.routes.draw do
   match 'about', to: 'static_pages#about'
   match 'order', to: 'static_pages#order'
   match 'currentmenu', to: 'static_pages#current_menu'
+  match 'thankyou', to: 'static_pages#thank_you'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

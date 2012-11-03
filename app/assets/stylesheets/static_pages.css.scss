@@ -9,20 +9,10 @@ body {
   text-align: center;
 }
 
-.valign-outer {
-  display: table;
-  width: 100%;
-}
-
-.main-box {
-  display: table-cell;
-  height: 500px;
-  vertical-align: middle;
-}
-
 #top-menu {
   color: saddleBrown;
   width: 750px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   border: 4px solid saddleBrown;

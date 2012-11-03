@@ -8,21 +8,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="valign-outer">
-    <div class="main-box">
-      <div id="top-menu">
-        <a id="logo" href='/'>MUST HAVE PIE</a>
-        <div id="top-menu-links">
-          <a id="home-link" href="/">Home</a>
-          <a id="about-link" href="/about">About</a>
-          <a id="current-menu-link" href="/currentmenu">Current Menu</a>
-          <a id="order-link" href="/order">Order</a>
-        </div>
-      </div>
-      <div id="content">
-        <%= yield %>
-      </div>
+  <div id="top-menu">
+    <a id="logo" href='/'>MUST HAVE PIE</a>
+    <div id="top-menu-links">
+      <a id="home-link" href="/">Home</a>
+      <a id="about-link" href="/about">About</a>
+      <a id="current-menu-link" href="/currentmenu">Current Menu</a>
+      <a id="order-link" href="/order">Order</a>
     </div>
+  </div>
+  <div id="content">
+    <%= yield %>
   </div>
 </body>
 </html>
