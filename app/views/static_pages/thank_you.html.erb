@@ -1,0 +1,6 @@
+<% provide :title, 'Thank You!' %>
+<p>Thank you for your order!</p>
+
+<% unless flash[:last_order].nil? %>
+  For your reference, your order id number is <%= flash[:last_order].id %>.
+<% end %>
