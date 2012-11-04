@@ -10,6 +10,10 @@ class OrdersController < AdminController
 
     respond_to do |format|
       if @order.save
+        # send email
+        OrderMailer.order_email(@order).deliver
+        
+        # set up page they get to
         flash[:last_order] = @order
         format.json { render json: @order, status: :created, location: @order }
         format.html { redirect_to thankyou_path }
