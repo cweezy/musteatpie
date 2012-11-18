@@ -18,6 +18,10 @@
   <% end %>
   <p><%= link_to_add_fields "Add Pie", f, :pie_orders %></p>
   <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :pickup_datetime %>
+  </div>
+  <div class="field">
     <%= f.label :comments_or_whatever %>
     <%= f.text_area :comments, rows: 3 %>
   </div>
