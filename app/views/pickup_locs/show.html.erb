@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pickup_loc.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @pickup_loc.description %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_pickup_loc_path(@pickup_loc) %> |
+<%= link_to 'Back', pickup_locs_path %>

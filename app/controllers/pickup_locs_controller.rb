@@ -1,0 +1,3 @@
+class PickupLocsController < AdminController
+
+end

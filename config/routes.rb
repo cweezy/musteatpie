@@ -10,6 +10,7 @@ Musteatpie::Application.routes.draw do
   resources :menus
   resources :pies
   resources :orders
+  resources :pickup_locs
 
 
   match 'about', to: 'static_pages#about'

@@ -1,0 +1,25 @@
+<h1>Here are the pickup_locs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pickup_locs.each do |pickup_loc| %>
+  <tr>
+    <td><%= pickup_loc.name %></td>
+    <td><%= pickup_loc.description %></td>
+    <td><%= link_to 'Show', pickup_loc %></td>
+    <td><%= link_to 'Edit', edit_pickup_loc_path(pickup_loc) %></td>
+    <td><%= link_to 'Destroy', pickup_loc, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pickup_loc', new_pickup_loc_path %>

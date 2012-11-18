@@ -1,4 +1,4 @@
-class AdminController < ApplicationController
+class AdminController < InheritedResources::Base
   before_filter :authenticate
 
   def authenticate
