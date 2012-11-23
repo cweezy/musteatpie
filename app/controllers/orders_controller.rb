@@ -5,6 +5,7 @@ class OrdersController < AdminController
   def create
 
     params[:order][:pie_orders_attributes] = params[:order][:pie_orders_attributes].map { |k, v| v }
+    params[:order][:pickup_datetime] =Date.strptime(params[:order][:pickup_datetime], "%m/%d/%Y").to_datetime
 
     @order = Order.new(params[:order])
 
