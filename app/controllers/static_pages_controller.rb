@@ -23,6 +23,8 @@ class StaticPagesController < ApplicationController
     1.times do
       @order.pie_orders.push PieOrder.new
     end
+
+    @pickup_locs = PickupLoc.all
     
     respond_to do |format|
       format.html

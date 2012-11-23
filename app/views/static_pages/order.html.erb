@@ -22,6 +22,10 @@
     <%= f.text_field :pickup_datetime %>
   </div>
   <div class="field">
+    <%= f.label :pickup_location %><br />
+    <%= f.collection_select :pickup_loc_id, @pickup_locs, :id, :name %>
+  </div>
+  <div class="field">
     <%= f.label :comments_or_whatever %>
     <%= f.text_area :comments, rows: 3 %>
   </div>
