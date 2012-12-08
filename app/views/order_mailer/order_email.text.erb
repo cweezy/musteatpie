@@ -1,3 +1,19 @@
-This is a test email.
+Hi Sayo,
+
+Someone has ordered something!
+
+Customer name: <%= @order.customer_name %>
+Email: <%= @order.email %>
+Phone: <%= @order.phone %>
+
+Pickup Location: <%= @order.pickup_loc.name %>
+Pickup date: <%= @order.pickup_datetime.to_date %>
+
+Pie orders:
+<% @order.pie_orders do |po| %>
+  <%= po.quantity %> - <%= po.pie.name %>
+<% end %>
+
+Total price: <%= @order.price %>
 
 Comments: <%= @order.comments %>
