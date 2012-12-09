@@ -13,10 +13,11 @@
     <%= f.label :phone %><br />
     <%= f.text_field :phone %>
   </div>
-  <%= f.fields_for :pie_orders do |builder| %>
-    <%= render "pie_orders", :f => builder %>
-  <% end %>
-  <p><%= link_to_add_fields "Add Pie", f, :pie_orders %></p>
+
+  <%#= f.fields_for :pie_orders do |builder| %>
+    <%#= render "pie_orders", :f => builder %>
+  <%# end %>
+  <p class="add-pie-link"><%= link_to_add_fields "Add Pie", f, :pie_orders %></p>
   <div class="field">
     <%= f.label :date %><br />
     <%= f.text_field :pickup_datetime %>
@@ -29,6 +30,7 @@
     <%= f.label :comments_or_whatever %>
     <%= f.text_area :comments, rows: 3 %>
   </div>
+  <div class="total-price">Total price: $<span class="total-price-val"></span></div>
   <div class="actions">
     <%= f.submit %>
   </div>

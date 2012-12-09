@@ -25,6 +25,8 @@ class StaticPagesController < ApplicationController
     end
 
     @pickup_locs = PickupLoc.all
+
+    gon.current_pies = current_pies
     
     respond_to do |format|
       format.html
